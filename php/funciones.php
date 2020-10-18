@@ -1,21 +1,21 @@
-<?php
-function calculaTuiempo($fechaInicio, $fechaFin){
-    // Indice 0=años
-    // Indice 1 = meses
-    // Indice 2 = dias
-    // Indice 11 = total dias
-    $datetime1=date_create($fechaInicio);
-    $datetime2=date_create($fechaFin);
-    $interval=date_diff();
+<?php 
 
-    $tiempo[]=array();
+function edad($fechaInicio,$fechaFin){
+	//indice 0 = años
+	//indice 1= meses
+	//indice 2 = dias
+	//indice 11 = total en dias 
+	$datetime1 = date_create($fechaInicio);
+	$datetime2 = date_create($fechaFin);
+	$interval = date_diff($datetime1, $datetime2);
 
-    foreach ($interval as $valor){
-         $tiempo[]=$valor;
-    }
-    
-    return $tiempo;
+	$tiempo=array();
 
+	foreach ($interval as $valor) {
+		$tiempo[]=$valor;
+	}
+
+	return $tiempo;
 }
 
 ?>
